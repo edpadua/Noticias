@@ -1,5 +1,5 @@
-import { useState } from 'react'
-
+import React, { createContext, useEffect, useState } from "react";
+import axios from "axios";
 import './App.css'
 import Cabecalho from './Componentes/Cabecalho'
 import ListaNoticias from './Componentes/ListaNoticias'
@@ -10,9 +10,10 @@ function App() {
 
   return (
     <>
+       <Cabecalho />
       <NoticiasProvider>
-      <Cabecalho/>
-      <ListaNoticias/>
+       
+        <ListaNoticias />
       </NoticiasProvider>
     </>
   )

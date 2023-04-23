@@ -4,15 +4,15 @@ import Noticia from "../Noticia";
 
 
 function ListaNoticias(props) {
-    const { data } = useContext(NoticiasContext);
-    console.log(data);
+    const { dado } = useContext(NoticiasContext);
+    console.log("artigos",dado);
 
     return (
         <div>
             <div className="all__news">
-                {data
-                    ? data.articles.map((news) => (
-                        <Noticia data={news} key={news.url} />
+                {dado
+                    ? dado.map((news) => (
+                        <Noticia dado={news} key={news.url} />
                     ))
                     : "Loading"}
             </div>
