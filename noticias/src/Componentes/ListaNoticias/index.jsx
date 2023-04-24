@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { NoticiasContext } from "../../Contextos/NoticiasContext";
 import Noticia from "../Noticia";
+import styles from './ListaNoticias.module.css';
 
 
 function ListaNoticias(props) {
@@ -8,8 +9,8 @@ function ListaNoticias(props) {
     console.log("artigos",dado);
 
     return (
-        <div>
-            <div className="all__news">
+        <div className={styles.container}>
+            <div className={styles.noticias}>
                 {dado
                     ? dado.map((news) => (
                         <Noticia dado={news} key={news.url} />

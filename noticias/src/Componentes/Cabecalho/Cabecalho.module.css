@@ -1,8 +1,44 @@
 .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.1em 20em;
+
+    color: var(--branco);
     background-color: var(--azul-principal);
+    
+    -webkit-box-align: center;
+    align-items: center;
+
+    flex-flow: row nowrap;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    left: 0px;
+    padding: 0px 1em;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    z-index: 9;
+    height: inherit;
+}
+
+.navbar {
+
     height: 72px;
+    left: 0px;
+    right: 0px;
+    transition: all 0.2s ease-in-out 0s;
+    will-change: background-color, height;
+
+
+}
+
+.navbar_container {
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: transparent;
+    display: flex;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 20px;
 }

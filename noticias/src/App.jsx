@@ -10,11 +10,14 @@ function App() {
 
   return (
     <>
-       <Cabecalho />
-      <NoticiasProvider>
+      <Cabecalho />
+      <div className="conteudo_pagina">
+        <NoticiasProvider>
+
+          <ListaNoticias />
+        </NoticiasProvider>
        
-        <ListaNoticias />
-      </NoticiasProvider>
+      </div>
     </>
   )
 }
