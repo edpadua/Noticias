@@ -3,6 +3,12 @@ import styles from './Cabecalho.module.css';
 import { FaNewspaper } from 'react-icons/fa';
 
 function Cabecalho() {
+
+    
+
+    
+
+
     return (
         <header className={styles.cabecalho}>
 

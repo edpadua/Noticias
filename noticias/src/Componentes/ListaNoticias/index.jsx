@@ -5,11 +5,19 @@ import styles from './ListaNoticias.module.css';
 
 
 function ListaNoticias(props) {
+
+    
+
     const { dado } = useContext(NoticiasContext);
-    console.log("artigos",dado);
+    console.log("artigos", dado);
+
+
+    
+    
 
     return (
         <div className={styles.container}>
+            
             <div className={styles.noticias}>
                 {dado
                     ? dado.map((news) => (

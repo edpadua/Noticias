@@ -5,7 +5,8 @@ export const NoticiasContext = createContext();
 
 
 export default function NoticiasProvider({ children }) {
-    const [dado, setDado] = useState();
+    const [dado, setDado] = useState(null);
+    const [pais, setPais] = useState("us");
     const apiKey = import.meta.env.VITE_API_KEY;
     const category='general';
     
@@ -21,16 +22,17 @@ export default function NoticiasProvider({ children }) {
 
     useEffect(() => {
         
-        const topRatedNoticias=`https://newsapi.org/v2/top-headlines?country=us&${category}&apiKey=${apiKey}`;
+        const topRatedNoticias=`https://newsapi.org/v2/top-headlines?country=${pais}&category=${category}&apiKey=${apiKey}`;
        
         getTopNoticias(topRatedNoticias);
          
-      }, []);
+      }, [ ]);
     
 
+    const newLocal = { dado, setPais };
     return (
         <NoticiasContext.Provider
-            value={{ dado }}>
+            value={newLocal}>
             {children}
         </NoticiasContext.Provider>
     )
