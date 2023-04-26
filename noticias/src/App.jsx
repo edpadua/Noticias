@@ -24,10 +24,7 @@ function App() {
       <Cabecalho />
       <div className="conteudo_pagina">
         <NoticiasProvider >
-
-         
-
-          <ListaNoticias />
+         <ListaNoticias />
         </NoticiasProvider>
         <Rodape />
       </div>
